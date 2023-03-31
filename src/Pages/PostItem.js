@@ -13,15 +13,17 @@ const PostItem = ({ data }) => {
                     subheader={`Reactions: ${data.reactions}`}
                 >
                 </CardHeader>
-                <CardContent sx={{ height: 140, overflow: 'auto' }}>
+                <CardContent sx={{ height: 140, overflow: 'auto',color:'#757575' }}>
                     {data.body}
                 </CardContent>
-                <Stack spacing={2} direction="row" sx={{ pt: 1 }}>
+                <Stack spacing={2} direction="row" sx={{ pt: 1, }}>
                     {
                         data.tags.map(el => {
                             return <Chip
+                            color="secondary"
+
                                 label={el}
-                                variant="outlined"
+                                variant="contained"
                             />
                         })
                     }
